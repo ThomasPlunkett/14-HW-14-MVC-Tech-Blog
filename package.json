@@ -1,10 +1,11 @@
 {
   "name": "db",
   "version": "1.0.0",
-  "description": "",
+  "description": "Homework from Unit 14: Model-View-Controller (MVC): Tech Blog",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +19,14 @@
     "path": "^0.12.7",
     "prettier": "^2.3.0",
     "sequelize": "^6.6.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomasPlunkett/14-HW-14-MVC-Tech-Blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ThomasPlunkett/14-HW-14-MVC-Tech-Blog/issues"
+  },
+  "homepage": "https://github.com/ThomasPlunkett/14-HW-14-MVC-Tech-Blog#readme"
 }
