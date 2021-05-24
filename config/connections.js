@@ -13,7 +13,7 @@ if (process.env.JAWS_HOST) {
     {
       host: 'localhost',
       dialect: 'mysql',
-      port: 8080
+    //   port: 8080
     }
   );
 }
