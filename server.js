@@ -3,18 +3,19 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
-// commenting out below - this threw an error in initial npm start
-// const helpers = require('./utils/helpers');
+const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
+
+// Create a new sequelize store using the express-session package
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Set up Handlebars.js engine with custom helpers
-// const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({ helpers });
 
+// Configure and link a session object with the sequelize store
 const sess = {
   secret: 'Super secret secret',
   cookie: {},
@@ -25,9 +26,9 @@ const sess = {
   })
 };
 
+// Add express-session and store as Express.js middleware
 app.use(session(sess));
 
-// Inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
